@@ -30,6 +30,8 @@ When using Kramdown `{: .notice}` can be added after a sentence to assign the `.
 **Success Notice:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at [nibh elementum](#) imperdiet.
 {: .notice--success}
 
+Jekyll Rouge Highlight Tag
+
 {% highlight hcl %}
 locals {
   address_spaces = zipmap(var.regions, var.address_spaces)
@@ -37,6 +39,7 @@ locals {
   firewall_tags = merge(local.tags, {
     "role" = "hub_firewall"
   })
+
   network_tags = merge(local.tags, {
     "role" = "hub_virtual_network"
   })
@@ -76,6 +79,55 @@ locals {
   }
 }
 {% endhighlight %}
+
+Github Flavored Markdown Fenced Code Blocks
+```hcl
+locals {
+  address_spaces = zipmap(var.regions, var.address_spaces)
+
+  firewall_tags = merge(local.tags, {
+    "role" = "hub_firewall"
+  })
+
+  network_tags = merge(local.tags, {
+    "role" = "hub_virtual_network"
+  })
+
+  hub_virtual_networks = {
+    for r in var.regions : r => {
+      address_space                   = [local.address_spaces[r]]
+      name                            = module.naming[r].firewall.name
+      location                        = azurerm_resource_group.hub[r].location
+      resource_group_name             = azurerm_resource_group.hub[r].name
+      resource_group_lock_enabled     = false
+      resource_group_creation_enabled = false
+      mesh_peering_enabled            = true
+      routing_address_space           = [local.address_spaces[r]]
+      tags                            = local.network_tags
+      hub_router_ip_address           = "1.2.3.4"
+      #flow_timeout_in_minutes          = 4
+      subnets = {
+        # The module will currently fail attempting to attach a route table to AzureBastionSubnet
+        AzureBastionSubnet = {
+          address_prefixes             = [module.subnet_addressing[r].network_cidr_blocks["AzureBastionSubnet"]]
+          assign_generated_route_table = false
+        }
+        ServiceNowVMs = {
+          address_prefixes = [module.subnet_addressing[r].network_cidr_blocks["ServiceNowVM"]]
+        }
+      }
+      # firewall = {
+      #   sku_name              = "AZFW_VNet"
+      #   sku_tier              = "Standard"
+      #   threat_intel_mode     = "Off"
+      #   subnet_address_prefix = module.subnet_addressing[r].network_cidr_blocks["AzureFirewallSubnet"]
+      #   firewall_policy_id    = azurerm_firewall_policy.fwpolicy.id
+      #   tags                  = local.firewall_tags
+      # }
+    }
+  }
+}
+```
 
 Want to wrap several paragraphs or other elements in a notice? Using Liquid to capture the content and then filter it with `markdownify` is a good way to go.
 
