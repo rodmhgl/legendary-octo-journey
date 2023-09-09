@@ -1,5 +1,5 @@
 ---
-title: "The OpenTF fork is now available"
+title: "The OpenTF repository is now available"
 categories:
   - Blog
 tags:
