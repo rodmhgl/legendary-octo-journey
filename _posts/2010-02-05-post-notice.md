@@ -1,5 +1,6 @@
 ---
 title: "Post: Notice"
+classes: wide
 categories:
   - Blog
 tags:
@@ -46,8 +47,8 @@ locals {
       name                            = module.naming[r].firewall.name
       location                        = azurerm_resource_group.hub[r].location
       resource_group_name             = azurerm_resource_group.hub[r].name
-      resource_group_creation_enabled = false
       resource_group_lock_enabled     = false
+      resource_group_creation_enabled = false
       mesh_peering_enabled            = true
       routing_address_space           = [local.address_spaces[r]]
       tags                            = local.network_tags
@@ -73,7 +74,6 @@ locals {
       # }
     }
   }
-
 }
 {% endhighlight %}
 
