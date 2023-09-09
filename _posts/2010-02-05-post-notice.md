@@ -32,7 +32,7 @@ When using Kramdown `{: .notice}` can be added after a sentence to assign the `.
 
 Jekyll Rouge Highlight Tag
 
-{% highlight hcl %}
+{% highlight hcl linenos %}
 locals {
   address_spaces = zipmap(var.regions, var.address_spaces)
 
