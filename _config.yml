@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Rod Stewart"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/profile.png"
   bio    : "Cloud Architect / DevSecOps Practitioner @ Avanade. Super into Azure, Terraform, and Automation. Addicted to learning."
   links:
     - label: "Website"
