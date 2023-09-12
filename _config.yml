@@ -67,7 +67,7 @@ author:
       url: "https://rodmhgl.github.io/legendary-octo-journey/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/rodmghl"
+      url: "https://github.com/rodmhgl"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
@@ -79,7 +79,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/rodmghl"
+      url: "https://github.com/rodmhgl"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
