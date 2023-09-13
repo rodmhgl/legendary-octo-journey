@@ -1,6 +1,7 @@
 ---
 title: "Understanding Python F-strings: A Beginner's Guide"
 date: 2023-09-13
+classes: wide
 categories:
   - Blog
 tags:
