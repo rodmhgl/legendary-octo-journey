@@ -1,5 +1,6 @@
 ---
 title: "The OpenTF Manifesto"
+date: 2023-08-15
 categories:
   - Blog
   - Terraform
