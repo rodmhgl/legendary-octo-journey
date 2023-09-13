@@ -1,5 +1,6 @@
 ---
 title: "The OpenTF repository is now available"
+date: 2023-09-05
 categories:
   - Blog
   - Terraform
