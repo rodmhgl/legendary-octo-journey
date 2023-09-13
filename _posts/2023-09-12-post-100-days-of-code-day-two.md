@@ -1,5 +1,6 @@
 ---
 title: "100 Days of Code - Day Two"
+date: 2023-09-12
 categories:
   - Blog
   - 100DaysOfCode
