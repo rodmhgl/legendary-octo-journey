@@ -1,5 +1,6 @@
 ---
 title: "GCP: Introducing Infrastructure Manager Powered by Terraform"
+date: 2023-09-12
 categories:
   - Blog
   - Terraform
