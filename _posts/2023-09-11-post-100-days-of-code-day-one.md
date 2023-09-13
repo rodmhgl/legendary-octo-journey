@@ -1,5 +1,6 @@
 ---
 title: "100 Days of Code - Day One"
+date: 2023-09-11
 categories:
   - Blog
   - 100DaysOfCode
