@@ -1,5 +1,6 @@
 ---
 title: "Terraform Cloud Continuous Validation Available"
+date: 2023-09-13
 categories:
   - Blog
   - TerraformCloud
