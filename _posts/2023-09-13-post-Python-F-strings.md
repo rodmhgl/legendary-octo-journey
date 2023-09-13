@@ -84,37 +84,37 @@ print(f"Hello, {first_name} {last_name}. You are {age}. " +
 
 ### Other Practical F-String Examples:
 
-1. **Basic Usage with Variables**:
-    {% highlight Python %}
-    name = "Alice"
-    age = 30
-    greeting = f"My name is {name} and I am {age} years old."
-    print(greeting)  # "My name is Alice and I am 30 years old."
-    {% endhighlight %}
+**Basic Usage with Variables**:
+  {% highlight Python %}
+  name = "Alice"
+  age = 30
+  greeting = f"My name is {name} and I am {age} years old."
+  print(greeting)  # "My name is Alice and I am 30 years old."
+  {% endhighlight %}
 
-2. **Embedding Expressions**:
-    Operations can be performed right inside the curly braces.
-    {% highlight Python %}
-    x = 10
-    y = 5
-    result = f"{x} multiplied by {y} is {x * y}."
-    print(result)  # "10 multiplied by 5 is 50."
-    {% endhighlight %}
+**Embedding Expressions**:
+  Operations can be performed right inside the curly braces.
+  {% highlight Python %}
+  x = 10
+  y = 5
+  result = f"{x} multiplied by {y} is {x * y}."
+  print(result)  # "10 multiplied by 5 is 50."
+  {% endhighlight %}
 
-3. **Using Methods and Attributes**:
-    Here, we call the .upper() method inside of the f-string
-    {% highlight Python %}
-    word = "hello"
-    output = f"Uppercase of {word} is {word.upper()}."
-    print(output)  # "Uppercase of hello is HELLO."
-    {% endhighlight %}
+**Using Methods and Attributes**:
+  Here, we call the .upper() method inside of the f-string
+  {% highlight Python %}
+  word = "hello"
+  output = f"Uppercase of {word} is {word.upper()}."
+  print(output)  # "Uppercase of hello is HELLO."
+  {% endhighlight %}
 
-5. **Data Formatting**:
-    Data can be formatted directly inside the curly braces.
-    {% highlight Python %}
-    pi = 3.14159265
-    formatted = f"Value of pi rounded to 2 decimal places: {pi:.2f}"
-    print(formatted)  # "Value of pi rounded to 2 decimal places: 3.14"
-    {% endhighlight %}
+**Data Formatting**:
+  Data can be formatted directly inside the curly braces.
+  {% highlight Python %}
+  pi = 3.14159265
+  formatted = f"Value of pi rounded to 2 decimal places: {pi:.2f}"
+  print(formatted)  # "Value of pi rounded to 2 decimal places: 3.14"
+  {% endhighlight %}
 
 F-strings are an elegant and efficient solution for string formatting and interpolation in Python. By using them, you can improve the readability and conciseness of your Python code.
