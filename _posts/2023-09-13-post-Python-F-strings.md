@@ -8,9 +8,28 @@ tags:
   - python
 ---
 
-This is just a draft - go away! :) 
+I was recently asked to put together a small blog post explaing f-strings, so that's just what I'm doing. 
 
-Fork this repo! [https://replit.com/@rodmhgl/MidnightblueAptProcessor](https://replit.com/@rodmhgl/MidnightblueAptProcessor)
+### What are F-strings?
+
+F-strings, introduced in Python 3.6, are a way to embed expressions inside string literals. They come prefixed with the letter 'f', which is where the name "f-strings" comes from.
+
+### Why are F-strings Useful?
+
+1. **Readability**: F-strings enhance the readability of your code by letting you directly embed variables into strings. This eliminates the need for older methods like `.format()` or the `%` formatting.
+2. **Conciseness**: They significantly reduce the amount of code you need to format a string.
+3. **Performance**: Typically, f-strings offer better performance when compared to other string formatting methods.
+
+### How to Use F-strings?
+
+To craft an f-string, simply prefix your string with `f` or `F` and use curly braces `{ }` to embed your variables or expressions.
+
+In our first example below, we initially define and set our variables, and we then we use four different techniques to print them to the screen. 
+
+As you walk through the example, note how they all produce the exact same outcome despite using very different approaches. Which approach you choose will be based on your needs, although f-strings will often win out. 
+
+I highly recommend that your fork the [replit](https://replit.com/@rodmhgl/MidnightblueAptProcessor) for this post and experiment on your own! 
+[https://replit.com/@rodmhgl/MidnightblueAptProcessor](https://replit.com/@rodmhgl/MidnightblueAptProcessor)
 
 {% highlight Python %}
 # Consolidated from https://realpython.com/python-f-strings/
@@ -62,23 +81,10 @@ print(f"Hello, {first_name} {last_name}. You are {age}. " +
        f"You are a {profession}. You were a member of {affiliation}.\n")
 {% endhighlight %}
 
-### What are F-strings?
 
-F-strings, introduced in Python 3.6, are a way to embed expressions inside string literals. They come prefixed with the letter 'f', which is where the name "f-strings" comes from.
+### Other Practical F-String Examples:
 
-### Why are F-strings Useful?
-
-1. **Readability**: F-strings enhance the readability of your code by letting you directly embed variables into strings. This eliminates the need for older methods like `.format()` or the `%` formatting.
-2. **Conciseness**: They significantly reduce the amount of code you need to format a string.
-3. **Performance**: Typically, f-strings offer better performance when compared to other string formatting methods.
-
-### How to Use F-strings?
-
-To craft an f-string, simply prefix your string with `f` or `F` and use curly braces `{ }` to embed your variables or expressions.
-
-### Practical Examples:
-
-1. **Basic Usage**:
+1. **Basic Usage with Variables**:
     {% highlight Python %}
     name = "Alice"
     age = 30
@@ -96,18 +102,19 @@ To craft an f-string, simply prefix your string with `f` or `F` and use curly br
     {% endhighlight %}
 
 3. **Using Methods and Attributes**:
+    Here, we call the .upper() method inside of the f-string
     {% highlight Python %}
     word = "hello"
     output = f"Uppercase of {word} is {word.upper()}."
     print(output)  # "Uppercase of hello is HELLO."
     {% endhighlight %}
 
-4. **Data Formatting**:
-    Format the data directly inside the curly braces.
+5. **Data Formatting**:
+    Data can be formatted directly inside the curly braces.
     {% highlight Python %}
     pi = 3.14159265
     formatted = f"Value of pi rounded to 2 decimal places: {pi:.2f}"
     print(formatted)  # "Value of pi rounded to 2 decimal places: 3.14"
     {% endhighlight %}
 
-In conclusion, f-strings are an elegant and efficient solution for string formatting and interpolation in Python. By using them, you can improve the readability and conciseness of your Python code.
+F-strings are an elegant and efficient solution for string formatting and interpolation in Python. By using them, you can improve the readability and conciseness of your Python code.
