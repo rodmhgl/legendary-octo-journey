@@ -8,7 +8,7 @@ tags:
   - python
 ---
 
-I was recently asked to put together a small blog post explaing f-strings, so that's just what I'm doing. 
+I was recently asked to put together a small blog post explaining f-strings, so that's just what I'm doing. 
 
 ### What are F-strings?
 
