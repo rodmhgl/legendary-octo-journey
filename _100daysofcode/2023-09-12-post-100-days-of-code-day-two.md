@@ -31,11 +31,11 @@ print(f"Each person should pay: ${total_per_person:.2f}")
 
 The problem with doing exercises like this as someone who has coded before, is that I'm constantly thinking about things that aren't relevant at this point such as input validation. I'm sure that we'll get to that later in the course, but it's hard to not think about it now.
 
-Below is the kind of thing that I want to do, but I know we'll get there. The code below is virtually identical to the code above, except I have created two wrappers for the input function. 
+Below is the kind of thing that I want to do, but I know we'll get there. The code below is virtually identical to the code above, except I have created two wrappers for the input function.
 
-These wrappers handle the necessary type conversion and also do some basic input validation and error handling in the event we get invalid input from the user. Once we are past defining these new wrappers, the code looks very much like it did before, we're simply replacing input() with get_float_input or get_int_input as needed. 
+These wrappers handle the necessary type conversion and also do some basic input validation and error handling in the event we get invalid input from the user. Once we are past defining these new wrappers, the code looks very much like it did before, we're simply replacing input() with get_float_input or get_int_input as needed.
 
-This code works and is definitely an improvement, but I don't know how "Pythonic" it is. Perhaps I'll come back and revisit it as the course progresses. 
+This code works and is definitely an improvement, but I don't know how "Pythonic" it is. Perhaps I'll come back and revisit it as the course progresses.
 
 {% highlight Python %}
 def get_float_input(prompt: str) -> float:
