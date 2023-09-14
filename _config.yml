@@ -48,9 +48,9 @@ kramdown:
   enable_coderay: false
 
 collections:
-  100daysofcode:
-    output: true
-    permalink: /:collection/:path/
+  - 100daysofcode:
+      output: true
+      permalink: /:collection/:path/
 
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
