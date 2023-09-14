@@ -18,7 +18,7 @@ Items covered today:
 - count() method
 - modulo operator (%)
 
-The final project for today was a _choose your own adventure_ style game to practice the concepts we learned today. I loved these books as a kid, so this was a fun project to work on. I'm sure there are more efficient ways to write this with classes / data structures, but I'm happy with how it turned out.
+The final project for today was a _choose your own adventure_ style game to practice the concepts we learned today. I loved these books as a kid, so this was a fun project to work on. I'm sure there are more efficient ways to write this with classes / data structures, but I wanted to stick within the constraints of what we've covered so far. 
 
 {% highlight Python %}
 print("Welcome to Treasure Island.")
