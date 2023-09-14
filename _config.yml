@@ -23,6 +23,12 @@ repository: "rodmhgl/legendary-octo-journey"
 minimal_mistakes_skin: "dark" # default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 search: true
 
+collections:
+  100daysofcode:
+    output: true
+    permalink: /:collection/:path/
+
+
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
@@ -120,6 +126,17 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _100daysofcode
+  - scope:
+      path: ""
+      type: 100daysofcode
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 category_archive:
   type: liquid
