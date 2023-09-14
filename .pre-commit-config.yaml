@@ -20,30 +20,6 @@ repos:
       args: [--fix=lf]
     # Cross platform
     - id: detect-private-key
-- repo: https://github.com/antonbabenko/pre-commit-terraform
-  rev: v1.83.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
-  hooks:
-    # Terraform
-    - id: terraform_fmt
-    - id: terraform_docs
-    - id: terraform_tflint
-    # - id: terraform_checkov
-    # - id: terraform_providers_lock
-    # - id: terraform_tfsec
-    # - id: terrascan
-    - id: tfupdate
-      args:
-      - --args=terraform --version '>= 1.5.6'
-    - id: tfupdate
-      args:
-      - --args=provider --version '~> 3.71.0' azurerm
-    - id: tfupdate
-      args:
-      - --args=provider --version '~> 3.5.1' random
-    # - id: infracost_breakdown
-    #   args:
-    #     - --args=--path=.
-    #   verbose: true
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.4.0
   hooks:
