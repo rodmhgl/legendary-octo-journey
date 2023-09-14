@@ -23,12 +23,6 @@ repository: "rodmhgl/legendary-octo-journey"
 minimal_mistakes_skin: "dark" # default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 search: true
 
-collections:
-  100daysofcode:
-    output: true
-    permalink: /:collection/:path/
-
-
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
@@ -38,14 +32,26 @@ compress_html:
 
 # Build settings
 markdown: kramdown
-  # input: GFM
-  # hard_wrap: false
-  # auto_ids: true
-  # footnote_nr: 1
-  # entity_output: as_char
-  # toc_levels: 1..6
-  # smart_quotes: lsquo,rsquo,ldquo,rdquo
-  # enable_coderay: false
+highlighter: rouge
+lsi:
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+collections:
+  100daysofcode:
+    output: true
+    permalink: /:collection/:path/
+
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
@@ -137,6 +143,8 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar:
+        nav: "docs"
 
 category_archive:
   type: liquid
