@@ -14,15 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: The Azure Laboratory
-email: 
+email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Just another DevOps blog. I write about Azure, DevOps, Infrastructure as Code, Terraform, Python, Go, and Automation.
 # twitter_username: username
 github_username: rodmhgl
 repository: "rodmhgl/legendary-octo-journey"
-minimal_mistakes_skin: "neon" # default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+minimal_mistakes_skin: "dark" # default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 search: true
 
 # HTML Compression
